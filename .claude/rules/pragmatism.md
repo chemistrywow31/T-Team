@@ -78,6 +78,23 @@ Q4: Is the technical-domain breadth justified?
 
 The decision-tree result must appear in the deliverable. Any AI / multi-agent recommendation lacking the four-question trace is a violation.
 
+### Marginal Value Definition (for Q1)
+
+"Marginal value" in Q1 is the **total incremental value** of the multi-agent solution over the simpler baseline (plain automation or single-shot chat). It includes ALL of the following — not just cost savings:
+
+| Value type | Example | How to quantify |
+|------------|---------|-----------------|
+| **Cost savings** | Headcount, outsourcing, time | Direct $ saved per year |
+| **Revenue gains** | Conversion lift, new sales channels | Incremental revenue × margin |
+| **Quality improvements** | Error rate, accuracy, defect avoidance | Loss-avoidance value (error rate Δ × loss per error) |
+| **Capability unlock** | Tasks the baseline literally cannot do (50-doc cross-reference, 24/7 multilingual triage, persistent agent memory) | New market / business value enabled; if baseline = 0, ROI is bounded only by cost |
+
+Quantification requirement: every value source claimed in Q1 must be expressed in the same unit (currency or a single agreed KPI) so the 15× ratio is computable. "It will feel better" or "users will love it" are not quantifications and do not pass Q1.
+
+Capability-unlock exception: when the baseline cannot perform the task at all, Q1 is satisfied by demonstrating (a) the capability gap is real (baseline produces wrong / no output on representative test cases) and (b) the unlocked capability has a documented business value. The 15× ratio does not apply when the denominator-equivalent baseline value is zero.
+
+Common framing error: narrowing "marginal value" to "cost savings only" is a violation. Effect-driven and capability-driven value must be evaluated alongside cost-driven value.
+
 ### Five-Fold Adoption Conditions for Level 4 Multi-Agent
 
 When Q3 reaches Level 4, the recommendation must verify all five conditions are reasonably attainable. If not, downgrade to Level 3 or lower:
@@ -113,6 +130,8 @@ When presenting options, label each as Lake or Ocean. For Lake-scope work, alway
 - Designing for scale > 10x stated requirements without explicit user request → Violation
 - Using "future-proofing" as sole justification for added complexity → Violation
 - Recommending an AI / agentic / multi-agent solution without the four-question decision-tree trace → Violation
+- Computing Q1 marginal value as cost savings only, omitting revenue / quality / capability-unlock value sources → Violation
+- Claiming Q1 value sources without quantification (e.g. "it will feel better") → Violation
 - Recommending Level 4 multi-agent without verifying the five-fold adoption conditions → Violation
 - Taking a shortcut on Lake-scope work when a complete implementation is achievable → Violation
 

@@ -70,7 +70,7 @@ Level 4 諮詢時自動觸發。兩個對立 agent：
 #### 5. **AI/Multi-agent 決策樹**
 
 每個牽涉 AI 或 multi-agent 的建議，必須先過：
-- ROI ≥ 15× 才考慮（否則建議單純自動化）
+- ROI ≥ 15× marginal value 才考慮（marginal value 含省成本、新營收、品質提升、能力解鎖；不只省錢。否則建議單純自動化）
 - 有沒有專責工程資源？
 - 是否真的 Level 4 場景？
 - 跨域數量是否合理？
@@ -185,7 +185,7 @@ And mandates a three-tier eval: Unit / LLM-as-Judge / Production Sampling.
 #### 5. **AI/Multi-Agent Decision Tree**
 
 Any AI- or multi-agent-flavored recommendation must first pass:
-- Is the ROI ≥ 15×? (otherwise: plain automation)
+- Is the ROI ≥ 15× marginal value? (marginal value = cost savings + revenue gains + quality improvements + capability unlock — not cost only. Otherwise: plain automation)
 - Are there dedicated engineering resources?
 - Is this genuinely a Level 4 scenario?
 - Is the cross-domain count justified?
