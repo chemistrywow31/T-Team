@@ -1,6 +1,6 @@
 # T-Team — Tech-Advisor
 
-> Brand: **T-Team** · Folder: `tech-advisor` · Codename: `Tech-Advisor`
+> Brand: **T-Team** · Folder: `tech-advisor` · Codename: `Tech-Advisor` · Runtime: Codex-native + Claude Code compatible
 
 [繁體中文](#繁體中文) · [English](#english) · [📖 Glossary](#-glossary--術語對照表) · [🚀 Quick Start](#-quick-start--快速啟動)
 
@@ -22,7 +22,7 @@ T-Team 是一個 **技術方案設計諮詢團隊**。
 | 「我要做一個語音轉文字服務，該怎麼選技術棧？」 | ✅ |
 | 「multi-agent 還是單一 LLM 比較適合我這個案例？」 | ✅ |
 | 「我想評估從 PostgreSQL 換到 MongoDB 的可行性」 | ✅ |
-| 「幫我寫一個 Python class」 | ❌（用一般 Claude 即可）|
+| 「幫我寫一個 Python class」 | ❌（用一般 coding assistant 即可）|
 | 「這段 code 有 bug 幫我修」 | ❌ |
 
 ### 核心能力與亮點
@@ -137,7 +137,7 @@ In short: **a senior tech advisor that picks fights with itself, cites every cla
 | "I want to build a speech-to-text service — how do I pick the stack?" | ✅ |
 | "Should I use multi-agent or a single LLM for this case?" | ✅ |
 | "I want to evaluate migrating from PostgreSQL to MongoDB" | ✅ |
-| "Write me a Python class" | ❌ (use plain Claude) |
+| "Write me a Python class" | ❌ (use a plain coding assistant) |
 | "Fix the bug in this code" | ❌ |
 
 ### Core Capabilities & Highlights
@@ -371,30 +371,68 @@ Updated quarterly. It's the **health check chart for your tech stack** — and y
 
 ### Invoke / 啟動指令
 
+#### Codex
+
+From this repository, start Codex and ask for T-Team explicitly:
+
 ```bash
-/boss
+codex "用 T-Team 做技術方案：{你的技術問題}"
 ```
 
-The entry-point skill spawns Solution Coordinator and runs the full T-Team workflow. You'll be guided through each phase interactively.
-此入口 skill 會啟動 Solution Coordinator，跑完整的 T-Team 工作流程。每個階段會互動式引導你進行。
+Inside an existing Codex session, these all trigger the same workflow:
+
+```text
+用 T-Team 做技術方案：{你的技術問題}
+boss {your technical decision request}
+/boss {your technical decision request}
+```
+
+Codex reads `AGENTS.md`, loads `.codex/t-team/skills/boss/SKILL.md`, then runs Solution Coordinator in single-controller mode by default. Codex subagents are used only when the user explicitly asks for subagents or parallel delegation.
+
+#### Claude Code
+
+Legacy Claude Code usage remains available:
+
+```text
+/boss {your technical decision request}
+```
+
+Claude Code reads `CLAUDE.md` and `.claude/`.
 
 ### Folder Structure / 目錄結構
 
-```
+```text
 teams/tech-advisor/
-├── README.md           ← (this file / 本檔)
-├── CLAUDE.md           ← team instructions / 團隊規範
-└── .claude/
-    ├── agents/         ← 10 agents (after upgrade / 升級後 10 個)
-    ├── skills/         ← 9 skills incl. /boss entry / 9 個 skill
-    ├── rules/          ← 5 rules / 5 條規則
-    └── settings.json   ← hooks + permissions
+├── README.md                 ← this file / 本檔
+├── AGENTS.md                 ← Codex entry point / Codex 入口
+├── CLAUDE.md                 ← Claude Code entry point / Claude 入口
+├── .codex/
+│   └── t-team/               ← Codex-native runtime / Codex 原生版本
+│       ├── agents/           ← 10 role files / 10 個角色檔
+│       ├── skills/           ← 9 Codex skill references / 9 個 skill
+│       ├── rules/            ← team rules, including Codex-only mappings
+│       └── scripts/          ← worklog + Codex validation scripts
+└── .claude/                  ← legacy Claude Code runtime / Claude 舊版
+    ├── agents/
+    ├── skills/
+    ├── rules/
+    └── settings.json         ← Claude hooks + permissions
 ```
+
+### Codex Validation / Codex 驗證
+
+```bash
+.codex/t-team/scripts/validate-codex.sh
+```
+
+The validator checks that the Codex runtime surface has no Claude-only frontmatter and that every referenced `rules/*.md` file exists under `.codex/t-team/rules/`.
 
 ### Versioning / 版本
 
 - **v1.0** — 2026-03 · Original 7-agent technical-solution-design team
 - **v2.0** — 2026-04 · Renamed to T-Team (Tech-Advisor); added evidence chain, adversarial debate, AI failure modes, ADR/C4/Tech Radar formats, code reviewer; sonnet → opus across all judgment-bearing agents
+- **v2.1** — 2026-04 · Added Codex-native `AGENTS.md` + `.codex/t-team/` runtime, explicit worklog scripts, Codex validation, and missing rule mappings for `anti-sycophancy` / `coordinator-mandate`
+- **v2.2** — 2026-05 · Moved Codex runtime support files under `.codex/t-team/` while keeping `AGENTS.md` as the Codex entry point
 
 See `.worklog/202604/technical-solution-design-upgrade/` for the upgrade decision trail.
 升級的完整決策證據鏈見 `.worklog/202604/technical-solution-design-upgrade/`。

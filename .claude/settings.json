@@ -14,20 +14,17 @@
       "Bash(git log *)",
       "Read",
       "Grep",
-      "Glob"
-    ],
-    "ask": [
-      "Bash(curl *)",
-      "Bash(rm *)",
-      "Bash(git push *)",
-      "Bash(git commit *)",
-      "Write",
-      "Edit",
-      "Agent"
+      "Glob",
+      "WebFetch"
     ],
     "deny": [
       "Bash(rm -rf /*)",
       "Bash(git push --force *)"
+    ],
+    "ask": [
+      "Bash(rm *)",
+      "Bash(git push *)",
+      "Bash(git commit *)"
     ]
   },
   "hooks": {
