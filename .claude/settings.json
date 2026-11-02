@@ -44,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "mkdir -p .worklog/$(date +%Y%m) && jq -r '.prompt' >> .worklog/$(date +%Y%m)/session-ledger.md",
+            "command": "mkdir -p .worklog/$(date +%Y%m) && jq -r '\"- \\(now | todate) UserPromptSubmit chars=\\(.prompt | length)\"' >> .worklog/$(date +%Y%m)/session-ledger.md",
             "timeout": 10
           }
         ]

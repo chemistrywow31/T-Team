@@ -1,6 +1,6 @@
 # T-Team — Tech-Advisor
 
-> Brand: **T-Team** · Folder: `tech-advisor` · Codename: `Tech-Advisor` · Runtime: Codex-native + Claude Code compatible
+> Brand: **T-Team** · Folder: `tech-advisor` · Codename: `Tech-Advisor` · Runtime: Claude Code
 
 [繁體中文](#繁體中文) · [English](#english) · [📖 Glossary](#-glossary--術語對照表) · [🚀 Quick Start](#-quick-start--快速啟動)
 
@@ -101,7 +101,7 @@ Phase 1-4 需要你親自參與並確認；Phase 5-6 是團隊內部作業。
 
 | Agent | 職責 |
 |---|---|
-| **Solution Coordinator** | 協調全流程、決定何時觸發 Phase 2.5 |
+| **Solution Coordinator** | 協調全流程、決定何時觸發 Phase 2.5；在主 session 執行，不派成子代理 |
 | **Requirements Analyst** | 訪談、釐清真實需求 |
 | **Solution Analyst** | 6 維度分析、Layer-A/B/C 存在性證明 |
 | **Solution Advocate** | 找方案的支持證據（Phase 2.5）|
@@ -216,7 +216,7 @@ Phases 1-4 require your participation and confirmation; Phases 5-6 are internal.
 
 | Agent | Role |
 |---|---|
-| **Solution Coordinator** | Orchestrates the full flow, decides when Phase 2.5 fires |
+| **Solution Coordinator** | Orchestrates the full flow, decides when Phase 2.5 fires; runs in the main session, never spawned |
 | **Requirements Analyst** | Interviews, clarifies the real requirement |
 | **Solution Analyst** | 6-dimensional analysis, Layer-A/B/C existence proofs |
 | **Solution Advocate** | Finds supporting evidence (Phase 2.5) |
@@ -371,61 +371,28 @@ Updated quarterly. It's the **health check chart for your tech stack** — and y
 
 ### Invoke / 啟動指令
 
-#### Codex
-
-From this repository, start Codex and ask for T-Team explicitly:
-
-```bash
-codex "用 T-Team 做技術方案：{你的技術問題}"
-```
-
-Inside an existing Codex session, these all trigger the same workflow:
-
-```text
-用 T-Team 做技術方案：{你的技術問題}
-boss {your technical decision request}
-/boss {your technical decision request}
-```
-
-Codex reads `AGENTS.md`, loads `.codex/t-team/skills/boss/SKILL.md`, then runs Solution Coordinator in single-controller mode by default. Codex subagents are used only when the user explicitly asks for subagents or parallel delegation.
-
 #### Claude Code
 
-Legacy Claude Code usage remains available:
+From this repository, in Claude Code:
 
 ```text
 /boss {your technical decision request}
 ```
 
-Claude Code reads `CLAUDE.md` and `.claude/`.
+Claude Code reads `CLAUDE.md` and `.claude/`. `/boss` runs Solution Coordinator in the main session. It is never spawned as a subagent.
 
 ### Folder Structure / 目錄結構
 
 ```text
 teams/tech-advisor/
 ├── README.md                 ← this file / 本檔
-├── AGENTS.md                 ← Codex entry point / Codex 入口
 ├── CLAUDE.md                 ← Claude Code entry point / Claude 入口
-├── .codex/
-│   └── t-team/               ← Codex-native runtime / Codex 原生版本
-│       ├── agents/           ← 10 role files / 10 個角色檔
-│       ├── skills/           ← 9 Codex skill references / 9 個 skill
-│       ├── rules/            ← team rules, including Codex-only mappings
-│       └── scripts/          ← worklog + Codex validation scripts
-└── .claude/                  ← legacy Claude Code runtime / Claude 舊版
+└── .claude/                  ← Claude Code runtime / Claude 執行版
     ├── agents/
     ├── skills/
     ├── rules/
     └── settings.json         ← Claude hooks + permissions
 ```
-
-### Codex Validation / Codex 驗證
-
-```bash
-.codex/t-team/scripts/validate-codex.sh
-```
-
-The validator checks that the Codex runtime surface has no Claude-only frontmatter and that every referenced `rules/*.md` file exists under `.codex/t-team/rules/`.
 
 ### Versioning / 版本
 
@@ -434,8 +401,8 @@ The validator checks that the Codex runtime surface has no Claude-only frontmatt
 - **v2.1** — 2026-04 · Added Codex-native `AGENTS.md` + `.codex/t-team/` runtime, explicit worklog scripts, Codex validation, and missing rule mappings for `anti-sycophancy` / `coordinator-mandate`
 - **v2.2** — 2026-05 · Moved Codex runtime support files under `.codex/t-team/` while keeping `AGENTS.md` as the Codex entry point
 
-See `.worklog/202604/technical-solution-design-upgrade/` for the upgrade decision trail.
-升級的完整決策證據鏈見 `.worklog/202604/technical-solution-design-upgrade/`。
+The Codex files from v2.1 and v2.2 are not in this repository. Only the Claude Code version is here.
+v2.1、v2.2 的 Codex 檔案不在這個 repo，目前只有 Claude Code 版。
 
 ---
 

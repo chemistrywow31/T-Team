@@ -55,6 +55,9 @@ Solution Coordinator evaluates these triggers after Phase 2 confirms. Trigger ev
 
 Agents are invoked via the Task tool within a single Claude Code session. Solution Coordinator manages all delegation and user interaction routing. This is the default mode. The 6+1 phase workflow's sequential gates (with parallelism only inside Phase 2.5) suit this mode well.
 
+- **Solution Coordinator runs in the MAIN session.** `/boss` makes the current session adopt `.claude/agents/solution-coordinator.md` as its playbook. Never spawn Solution Coordinator as a subagent: a spawned coordinator cannot dispatch further agents and cannot converse with the user.
+- **Specialists are dispatched via the Agent tool.** A specialist that needs user input returns `NEEDS_CONTEXT` with its questions; the coordinator relays them to the user and re-dispatches with the answers.
+
 ### Agent Teams Mode (Experimental, Opt-in)
 
 Agents can run as independent Claude Code instances with shared task lists if `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set in `~/.claude/settings.json` and the user opts in. T-Team's workflow is mostly sequential, so the experimental mode offers limited benefit beyond Phase 2.5. Default to subagent mode unless the user explicitly enables Agent Teams.
