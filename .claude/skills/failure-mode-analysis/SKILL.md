@@ -9,7 +9,7 @@ benefits-from:
 
 ## Purpose
 
-Identify how each major component can fail under real-world conditions, assess cascade impact, detect silent failures, and produce a failure mode registry that feeds into the Risk Assessment dimension and Spec Writer deliverables.
+Identify how each major component can fail under real-world conditions, assess cascade impact, detect silent failures, and produce a failure mode registry that feeds into the Risk Assessment dimension and the Phase 5 spec.
 
 T-Team adds a dedicated AI Agent Failure Modes section because AI-system failures are not detectable by standard APM (HTTP 200 with degraded output) and require purpose-built detection and recovery.
 
@@ -184,7 +184,7 @@ Spec includes a multi-agent customer support system. Failure mode registry conta
 
 Spec Reviewer rejects: "AI components present; AI Agent Failure Modes section is mandatory per `failure-mode-analysis` skill. Add AI-FM-1 through AI-FM-4 with detection / recovery / prevention specific to this system."
 
-Spec Writer adds the four AI failure modes and re-submits.
+The Phase 5 author adds the four AI failure modes and re-submits.
 
 ## References
 

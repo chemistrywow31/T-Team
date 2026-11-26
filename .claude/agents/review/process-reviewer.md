@@ -157,7 +157,7 @@ process review can proceed.
 
 ### Normal case: Healthy consultation
 
-Score 4/5 average; minor finding on Dimension 1 (Phase 3 → Phase 4 handoff lacked one technology decision rationale, recovered by Spec Writer asking).
+Score 4/5 average; minor finding on Dimension 1 (Phase 3 → Phase 4 handoff lacked one technology decision rationale, recovered when the Phase 5 author asked).
 
 ### Edge case: Phase 2.5 fired but trigger evaluation not logged
 

@@ -25,5 +25,5 @@ Each consultation writes `.worklog/{yyyymm}/{task-name}/phase-{n}-{label}/`. The
 
 ## Gotchas
 
-- The harness has blocked subagents from writing report files (Spec Writer and Process Reviewer in a 2026-07 consultation). When a subagent returns its report inline, persist it verbatim and note in the file who wrote it.
-- Small consultations compress Phases 2-4 into the Phase 1 conversation. That is fine; write each confirmed decision to the phase folder it belongs to, not all into `phase-1-discovery/`.
+- The harness has blocked subagents from writing report files (the Phase 5 author and the Process Reviewer in a 2026-07 consultation). When a subagent returns its report inline, persist it verbatim and note in the file who wrote it.
+- When a small consultation compresses Phases 2-4 into the Phase 1 conversation, still write each confirmed decision to the phase folder it belongs to, not all into `phase-1-discovery/`.
