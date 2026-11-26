@@ -13,7 +13,7 @@ Produce spec deliverables in the industry-standard ADR + C4 + Tech Radar format.
 
 - **Phase 5 (Spec Authoring)**: Spec Writer applies all three formats to produce the deliverable.
 - **Phase 6 (Review)**: Spec Reviewer applies the validation checklist.
-- **Solution Analyst (Phase 2-3)**: Use the Tech Radar tagging schema when classifying technology candidates.
+- **Phase 2-3 analysis**: Use the Tech Radar tagging schema when classifying technology candidates.
 
 ## Method
 

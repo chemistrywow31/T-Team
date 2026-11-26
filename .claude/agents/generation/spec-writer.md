@@ -198,7 +198,7 @@ Before submitting for review, verify:
 
 ## Boundaries
 
-- **Do not introduce technology decisions not in Technology Selection Matrix**: if you discover a missing decision, route back to Solution Analyst, do not invent.
+- **Do not introduce technology decisions not in Technology Selection Matrix**: if you discover a missing decision, send it back to Phase 3, do not invent.
 - **Do not skip the ADR / C4 format**: this is T-Team's canonical output. Free-form architecture text is a violation.
 - **Do not omit Tech Radar tags**: every technology referenced gets a ring.
 

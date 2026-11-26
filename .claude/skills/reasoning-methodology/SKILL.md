@@ -7,7 +7,7 @@ description: Catalog of LLM reasoning techniques (ToT, CoVe, Self-Consistency, R
 
 ## Purpose
 
-Apply structured reasoning techniques to high-stakes consultation outputs to raise quality and reduce hallucination. Solution Analyst invokes this skill when consultation is Level 4 (multi-agent / agentic recommendation) or when the output contains specific facts that downstream agents will rely on (numbers, version IDs, API names, citations).
+Apply structured reasoning techniques to high-stakes consultation outputs to raise quality and reduce hallucination. Invoke this skill when consultation is Level 4 (multi-agent / agentic recommendation) or when the output contains specific facts that downstream agents will rely on (numbers, version IDs, API names, citations).
 
 This skill does NOT replace ordinary reasoning. It supplements it for the specific scenarios listed below.
 
@@ -108,7 +108,7 @@ UNVERIFIED tags where appropriate (per `evidence-standards.md`).
 
 User asks: "Should we use LangGraph or CrewAI for our agentic workflow?"
 
-Solution Analyst applies Combo 1:
+The analysis applies Combo 1:
 - **ReAct**: retrieves SRC-013 (LangGraph 47M downloads), SRC-005 (CrewAI 5.2M downloads), SRC-011 (latency benchmark)
 - **ToT**: generates 3 candidates: (a) LangGraph alone, (b) CrewAI alone, (c) LangGraph + CrewAI for prototype-to-prod handoff. Evaluates: (a) Layer-A strong, (b) Layer-A medium, (c) over-engineering. Prunes (c); continues with (a) vs (b).
 - **Self-Consistency**: regenerates the trade-off table 3 times. Confirms each run produces same recommendation rank (LangGraph for production, CrewAI only for early prototyping).
@@ -120,7 +120,7 @@ Output: ADR-002 recommending LangGraph for production with CrewAI as optional pr
 
 User asks: "Should we use Postgres or MongoDB for product catalog?"
 
-Solution Analyst applies Self-Consistency: 3 runs produce 2 votes for Postgres, 1 for MongoDB. Below the clear-majority threshold (≥ 67%).
+The analysis applies Self-Consistency: 3 runs produce 2 votes for Postgres, 1 for MongoDB. Below the clear-majority threshold (≥ 67%).
 
 Action: surface the ambiguity to the user. "Two of three reasoning runs favored PostgreSQL on grounds A/B/C; one favored MongoDB on grounds D. The decision hinges on {specific tradeoff} — please confirm your preference on this dimension before I commit to a recommendation."
 

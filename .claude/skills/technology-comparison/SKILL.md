@@ -11,7 +11,7 @@ Provide a repeatable method for comparing 2–3 technology candidates for a give
 
 ## When to Use
 
-Use this skill during Phase 3 (Technology Selection) when the Solution Analyst needs to evaluate concrete technology options for a specific component (e.g., database, framework, hosting platform, message broker).
+Use this skill during Phase 3 (Technology Selection) when you need to evaluate concrete technology options for a specific component (e.g., database, framework, hosting platform, message broker).
 
 ## Method
 

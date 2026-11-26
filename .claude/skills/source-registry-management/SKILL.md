@@ -9,7 +9,7 @@ description: Build and maintain the per-consultation source registry with credib
 
 Construct and maintain the Source Registry that grounds every T-Team recommendation in cited evidence. The registry is the single authoritative location for sources used in a consultation; all agents read from it and cite by `source_id`.
 
-This skill is invoked by Solution Analyst, Solution Advocate, Solution Skeptic, and Spec Writer whenever they introduce a new technology claim, performance figure, market datum, or architectural assertion.
+Use this skill in analysis, debate and spec writing whenever you introduce a new technology claim, performance figure, market datum, or architectural assertion.
 
 ## When to Use
 

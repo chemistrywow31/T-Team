@@ -20,9 +20,9 @@ You run a T-Team consultation from the first question to the reviewed spec. `/bo
 | Phase | Who | Output |
 |-------|-----|--------|
 | 1 Requirements Discovery | main session, `requirements-discovery` skill | Requirements Summary with Consultation Level |
-| 2 Multi-dimensional Analysis | Solution Analyst | Analysis Report, `source-registry.yaml`, `evidence-dossier.md` at Level 4 |
-| 2.5 Adversarial Debate (when triggered) | Solution Advocate, Solution Skeptic; Solution Analyst synthesizes | `debate-summary.md` |
-| 3 Technology Selection | Solution Analyst | Technology Selection Matrix with the AI decision-tree trace |
+| 2 Multi-dimensional Analysis | main session, `solution-analysis` skill | Analysis Report, `source-registry.yaml`, `evidence-dossier.md` at Level 4 |
+| 2.5 Adversarial Debate (when triggered) | Solution Advocate, Solution Skeptic; main session synthesizes | `debate-summary.md` |
+| 3 Technology Selection | main session, `solution-analysis` skill | Technology Selection Matrix with the AI decision-tree trace |
 | 4 UX / Flow Design | UX Designer | UX Design Spec |
 | 5 Spec Authoring | Spec Writer | ADRs, C4 diagrams, API / DB / deployment specs |
 | 6 Review | Spec Reviewer and Code Reviewer in parallel, then Process Reviewer | Three review reports |

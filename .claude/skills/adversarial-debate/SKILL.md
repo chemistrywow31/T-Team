@@ -15,10 +15,10 @@ This skill is invoked exclusively during Phase 2.5 — Adversarial Debate, which
 
 Invoke this skill when Solution Coordinator dispatches Phase 2.5. Triggers:
 
-1. Solution Analyst's Phase 2 output recommends Level 4 multi-agent / orchestrator-worker architecture
+1. The Phase 2 output recommends Level 4 multi-agent / orchestrator-worker architecture
 2. The recommendation has high blast radius (production-affecting; > 10K users; financial / regulated workflow)
 3. User explicitly asks for stress-test / counter-arguments / challenge
-4. Solution Analyst self-flags Medium-or-below confidence on any analysis dimension
+4. The Phase 2 report self-flags Medium-or-below confidence on any analysis dimension
 
 If none of the triggers fire, this skill is not invoked and Phase 2.5 is skipped.
 
@@ -28,7 +28,7 @@ If none of the triggers fire, this skill is not invoked and Phase 2.5 is skipped
 
 Before debate begins, verify:
 - Source Registry exists at `.worklog/.../phase-2-analysis/source-registry.yaml`
-- Solution Analyst's Phase 2 output is complete and confirmed by user
+- The Phase 2 output is complete and confirmed by user
 - Both Solution Advocate and Solution Skeptic have Read access to the registry
 
 The debate transcript is written incrementally to `.worklog/.../phase-2-analysis/debate-summary.md`.
@@ -36,7 +36,7 @@ The debate transcript is written incrementally to `.worklog/.../phase-2-analysis
 ### Step 1: Round 1 — Opening
 
 **Advocate** (dispatched first):
-1. Read Solution Analyst's Phase 2 recommendation
+1. Read the Phase 2 recommendation
 2. Read the Source Registry
 3. Produce an Opening Statement defending the recommendation:
    - State the recommendation in one sentence
@@ -45,7 +45,7 @@ The debate transcript is written incrementally to `.worklog/.../phase-2-analysis
 4. Output max 600 words
 
 **Skeptic** (dispatched second, with Advocate's Opening as input):
-1. Read Solution Analyst's Phase 2 recommendation
+1. Read the Phase 2 recommendation
 2. Read the Source Registry
 3. Read Advocate's Opening Statement
 4. Produce a Rebuttal:
@@ -75,7 +75,7 @@ The debate transcript is written incrementally to `.worklog/.../phase-2-analysis
 
 ### Step 3: Convergence and Divergence Synthesis
 
-Solution Analyst (dispatched after both Round 2 outputs) produces the debate summary:
+The main session, after both Round 2 outputs, produces the debate summary:
 
 ```markdown
 # Debate Summary
@@ -116,7 +116,7 @@ If during Round 2 either agent fails to produce a concession (violating the conc
 
 ### Normal case: Multi-agent framework recommendation
 
-Input: Solution Analyst recommends LangGraph + Claude Agent SDK for an agentic customer support system.
+Input: the Phase 2 analysis recommends LangGraph + Claude Agent SDK for an agentic customer support system.
 
 **Round 1 Advocate (excerpt)**: "Recommendation: LangGraph v1.0 + Claude Agent SDK. Evidence: SRC-013 (47M+ monthly downloads, JP Morgan / BlackRock production), SRC-011 (4.2s p99 latency benchmark), SRC-002 (Anthropic-native MCP integration). Use-case fit: customer support with 5-domain specialization, 99.5% uptime target. Conditions: ROI ≥ 15× over single-shot chat is plausible given 2-week-to-2-day compression in resolution time."
 
