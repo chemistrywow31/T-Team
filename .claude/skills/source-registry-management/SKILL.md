@@ -25,6 +25,8 @@ Invoke this skill at three junctures:
 
 The registry lives at `.worklog/{yyyymm}/{task-name}/phase-2-analysis/source-registry.yaml`. If the file does not exist (Phase 2 just starting), create it with an empty `sources:` list.
 
+Every entry has `source_id` (`SRC-NNN`, sequential per consultation), `url` (`internal` for user artifacts), `author` (or `unknown`), `publication`, `date` (YYYY-MM-DD), `field_classification`, `age_at_access` (days), `credibility_score` (0.0-5.0), `key_claims`, and optionally `unverified_flags` and `exception`. The examples below show complete entries.
+
 ### Step 2: Determine Field Classification
 
 Before scoring credibility, classify the source's field:
@@ -39,7 +41,7 @@ When uncertain, default to `evolving`. Foundational papers (ADR original, C4 mod
 
 ### Step 3: Score Credibility
 
-Apply the formula from `rules/evidence-standards.md`:
+Score with the formula for the field. `.claude/rules/evidence-standards.md` says how much weight each band may carry.
 
 For `rapid_change`: `credibility = (Author × 0.15) + (Publication × 0.15) + (Recency × 0.50) + (Corroboration × 0.20)`
 

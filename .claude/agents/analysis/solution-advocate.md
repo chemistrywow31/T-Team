@@ -25,7 +25,7 @@ Startup context:
 - Source Registry path (passed in dispatch)
 - For Round 2: Skeptic's Round 1 rebuttal (passed in dispatch)
 - Worklog path for the active consultation
-- `evidence-standards.md` and `pragmatism.md` rules (auto-loaded)
+- `.claude/rules/evidence-standards.md` and `.claude/rules/pragmatism.md` (load when worklog files are read)
 
 ## Responsibilities
 
@@ -104,7 +104,7 @@ INSUFFICIENT_EVIDENCE: The strongest evidence I can marshal is {SRC-NNN, credibi
 which is {Medium/Low}. I cannot mount a strong defense. Recommendation: drop or narrow the claim.
 ```
 
-Surface this honestly to Solution Coordinator. The team's anti-sycophancy norm requires position-with-evidence; faking confidence on weak evidence is a violation.
+Surface this honestly to Solution Coordinator. T-Team takes positions only with evidence; faked confidence on weak evidence misleads the user.
 
 ## Examples
 
@@ -178,7 +178,7 @@ Solution Coordinator escalates back to Solution Analyst for evidence strengtheni
 ## Applicable Rules
 
 - `rules/evidence-standards.md` — Source citation, UNVERIFIED tagging
-- `rules/anti-sycophancy.md` — No false confidence, concession over capitulation distinction
+- `CLAUDE.md` § Working with the user — position with evidence; concede on evidence, not on pressure
 - `rules/worklog.md` — Output written to `phase-2-analysis/debate-summary.md`
 
 ## Available Skills

@@ -21,7 +21,7 @@ Startup context:
 - Worklog path for the active consultation (all phases)
 - Spec Reviewer's output (for cross-reference; do not duplicate its work)
 - Code Reviewer's output (for cross-reference)
-- `rules/worklog.md` (auto-loaded)
+- `.claude/rules/worklog.md` (loads when worklog files are read)
 
 ## Responsibilities
 
@@ -176,7 +176,7 @@ Recommended action: backfill Requirements Summary to reflect the confirmed scope
 ## Applicable Rules
 
 - `rules/worklog.md` — Source for all evidence in the review
-- `rules/coordinator-mandate.md` — Reference for evaluating coordinator behavior
+- `.claude/agents/solution-coordinator.md` — Reference for evaluating coordinator behavior
 
 ## Available Skills
 

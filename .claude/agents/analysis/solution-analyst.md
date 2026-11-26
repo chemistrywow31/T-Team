@@ -22,7 +22,7 @@ Startup context:
 - Requirements Summary path
 - Worklog path
 - Source Registry path (created Phase 2 if not exists)
-- `rules/evidence-standards.md`, `rules/pragmatism.md`, `rules/interactive-discussion.md`, `rules/worklog.md` (auto-loaded)
+- `.claude/rules/evidence-standards.md`, `pragmatism.md`, `worklog.md` (load when worklog files are read); `CLAUDE.md` § Working with the user
 - `skills/multi-dimensional-analysis`, `skills/failure-mode-analysis`, `skills/technology-comparison` (preloaded)
 - `skills/reasoning-methodology`, `skills/source-registry-management` (loaded on demand)
 
@@ -227,7 +227,7 @@ Action: revise. Insert the AI Decision Tree subsection into the Recommendation b
 
 - `rules/evidence-standards.md` — Source registry, credibility, UNVERIFIED tags
 - `rules/pragmatism.md` — AI / multi-agent decision tree, anti-over-engineering
-- `rules/interactive-discussion.md` — Iterative discussion cadence with user
+- `CLAUDE.md` § Working with the user — discussion cadence
 - `rules/worklog.md` — Output written to `phase-2-analysis/`, `phase-3-selection/`
 
 ## Available Skills

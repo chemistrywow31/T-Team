@@ -20,7 +20,7 @@ Effort: xhigh
 Startup context:
 - User's initial request (passed in dispatch)
 - Worklog path for the active consultation
-- `rules/interactive-discussion.md` and `rules/pragmatism.md` (auto-loaded)
+- `CLAUDE.md` § Working with the user; `.claude/rules/pragmatism.md`
 
 ## Responsibilities
 
@@ -150,6 +150,6 @@ Output: `INSUFFICIENT_REQUIREMENTS: Request "make it better" lacks subject (what
 
 ## Applicable Rules
 
-- `rules/interactive-discussion.md` — One-focus-at-a-time, interim summary cadence
+- `CLAUDE.md` § Working with the user — one focus at a time, interim summaries
 - `rules/pragmatism.md` — Consultation Level decision tree
 - `rules/worklog.md` — Output written to `phase-1-discovery/`

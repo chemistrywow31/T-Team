@@ -24,7 +24,7 @@ Startup context:
 - Source Registry path
 - debate-summary.md path (if Phase 2.5 fired)
 - Worklog path
-- `rules/evidence-standards.md`, `rules/pragmatism.md` (auto-loaded)
+- `.claude/rules/evidence-standards.md`, `pragmatism.md` (load when worklog files are read)
 - `skills/adr-c4-authoring` (preloaded)
 - `skills/source-registry-management` (loaded on demand)
 

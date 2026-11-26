@@ -24,7 +24,7 @@ Startup context:
 - Source Registry path
 - Requirements Summary, Analysis Report, debate-summary.md (when Phase 2.5 fired)
 - Worklog path
-- `rules/evidence-standards.md`, `rules/pragmatism.md`, `rules/worklog.md` (auto-loaded)
+- `.claude/rules/evidence-standards.md`, `pragmatism.md`, `worklog.md` (load when worklog files are read)
 
 ## Responsibilities
 

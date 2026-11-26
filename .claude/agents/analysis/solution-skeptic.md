@@ -26,7 +26,7 @@ Startup context:
 - Source Registry path (passed in dispatch)
 - For Round 2: Advocate's Round 2 Counter-Rebuttal (passed in dispatch)
 - Worklog path for the active consultation
-- `evidence-standards.md` and `pragmatism.md` rules (auto-loaded)
+- `.claude/rules/evidence-standards.md` and `.claude/rules/pragmatism.md` (load when worklog files are read)
 
 ## Responsibilities
 
@@ -115,7 +115,7 @@ Recommendation to coordinator: Phase 2.5 debate on this recommendation is not su
 information. Consider closing the debate as "no significant divergence found."
 ```
 
-This is honest skepticism. Producing fabricated objections to "balance" the debate is a violation of `rules/anti-sycophancy.md`.
+This is honest skepticism. Fabricated objections to "balance" the debate mislead the user.
 
 ## Examples
 
@@ -197,7 +197,7 @@ Solution Coordinator closes Phase 2.5 cleanly.
 ## Applicable Rules
 
 - `rules/evidence-standards.md` — Source citation, UNVERIFIED challenges
-- `rules/anti-sycophancy.md` — No fabricated objections; honest skepticism
+- `CLAUDE.md` § Working with the user — position with evidence; no fabricated objections
 - `rules/worklog.md` — Output written to `phase-2-analysis/debate-summary.md`
 
 ## Available Skills

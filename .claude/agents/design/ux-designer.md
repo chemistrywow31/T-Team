@@ -22,7 +22,7 @@ Startup context:
 - Requirements Summary path (passed in dispatch)
 - Technology Selection Matrix path (passed in dispatch)
 - Worklog path for the active consultation
-- `rules/interactive-discussion.md` (auto-loaded)
+- `CLAUDE.md` § Working with the user
 - `skills/ux-flow-design` (preloaded)
 
 ## Responsibilities
@@ -149,7 +149,7 @@ Action: remove the social share button. Flag to coordinator as "out-of-scope add
 
 ## Applicable Rules
 
-- `rules/interactive-discussion.md` — One-focus-at-a-time iteration with user
+- `CLAUDE.md` § Working with the user — one focus at a time
 - `rules/pragmatism.md` — Anti-over-engineering check
 - `rules/worklog.md` — Output written to `phase-4-ux/`
 
