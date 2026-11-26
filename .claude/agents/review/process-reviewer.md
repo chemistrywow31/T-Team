@@ -21,17 +21,17 @@ Startup context:
 - Worklog path for the active consultation (all phases)
 - Spec Reviewer's output (for cross-reference; do not duplicate its work)
 - Code Reviewer's output (for cross-reference)
-- `.claude/rules/worklog.md` (loads when worklog files are read)
+- Before starting, read `.claude/rules/worklog.md` and `.claude/agents/solution-coordinator.md`
 
 ## Responsibilities
 
 Evaluate the following six dimensions after each consultation cycle:
 
-### 1. Inter-agent Communication Quality
+### 1. Handoff Quality
 
-- Were handoff messages between phases clear and complete?
-- Was critical context lost between agents?
-- Did downstream agents have to re-discover information that upstream agents already established?
+- Did each phase's worklog give the next phase what it needed, so nothing confirmed earlier had to be rediscovered?
+- Were dispatches to the debaters and reviewers complete, and did they leave out the author's reasoning as `.claude/rules/handoff-contract.md` requires?
+- Was anything lost when a subagent's return was persisted?
 
 ### 2. Workflow Adherence
 
@@ -77,7 +77,7 @@ This dimension is informational, not blocking — surface drift, do not auto-rev
 
 ## Evaluation
 
-### 1. Inter-agent Communication Quality
+### 1. Handoff Quality
 **Score**: {1-5}
 **Evidence**: {specific references to tasks, messages, or handoffs}
 **Issues**: {identified problems}

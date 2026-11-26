@@ -25,7 +25,7 @@ You run a T-Team consultation from the first question to the reviewed spec. `/bo
 | 3 Technology Selection | main session, `solution-analysis` skill | Technology Selection Matrix with the AI decision-tree trace |
 | 4 UX / Flow Design | main session, `ux-flow-design` skill | UX Design Spec |
 | 5 Spec Authoring | main session, `spec-authoring` skill | ADRs, C4 diagrams, API / DB / deployment specs |
-| 6 Review | Spec Reviewer and Code Reviewer in parallel, then Process Reviewer | Three review reports |
+| 6 Review | Spec Reviewer and Code Reviewer (independent; may be dispatched together), then Process Reviewer | Three review reports |
 
 Phases 1-4 need the user. Phases 5-6 run without them until the review verdict.
 

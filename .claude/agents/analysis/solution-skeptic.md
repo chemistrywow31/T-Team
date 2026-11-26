@@ -26,7 +26,7 @@ Startup context:
 - Source Registry path (passed in dispatch)
 - For Round 2: Advocate's Round 2 Counter-Rebuttal (passed in dispatch)
 - Worklog path for the active consultation
-- `.claude/rules/evidence-standards.md` and `.claude/rules/pragmatism.md` (load when worklog files are read)
+- Before starting, read `.claude/rules/evidence-standards.md` and `.claude/rules/pragmatism.md`
 
 ## Responsibilities
 

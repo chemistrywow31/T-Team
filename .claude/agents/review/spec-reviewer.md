@@ -24,7 +24,7 @@ Startup context:
 - Source Registry path
 - Requirements Summary, Analysis Report, debate-summary.md (when Phase 2.5 fired)
 - Worklog path
-- `.claude/rules/evidence-standards.md`, `pragmatism.md`, `worklog.md` (load when worklog files are read)
+- Before starting, read `.claude/rules/evidence-standards.md`, `.claude/rules/pragmatism.md` and `.claude/rules/worklog.md`
 
 ## Responsibilities
 
@@ -70,7 +70,7 @@ Startup context:
 
 - Level 1 (Context) diagram exists
 - Level 2 (Container) diagram exists
-- Level 3 (Component) diagram exists for each significant container
+- Level 3 (Component) diagram exists for each significant container, or `phase-5-spec/decisions.md` records why a level would only repeat the one above
 - All diagrams in Mermaid syntax
 - Each diagram has a numbered legend
 

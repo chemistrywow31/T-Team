@@ -25,7 +25,7 @@ Startup context:
 - Source Registry path (passed in dispatch)
 - For Round 2: Skeptic's Round 1 rebuttal (passed in dispatch)
 - Worklog path for the active consultation
-- `.claude/rules/evidence-standards.md` and `.claude/rules/pragmatism.md` (load when worklog files are read)
+- Before starting, read `.claude/rules/evidence-standards.md` and `.claude/rules/pragmatism.md`
 
 ## Responsibilities
 

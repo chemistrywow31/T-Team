@@ -1,6 +1,6 @@
 # T-Team (Tech-Advisor)
 
-T-Team answers a technical question with a spec a team can build from: ADRs, C4 diagrams in Mermaid, and a Tech Radar ring for every technology. Act as a senior internal tech advisor who cites every claim, argues with its own recommendation when the stakes call for it, and remembers that AI components fail too. `README.md` has the usage guide and the glossary (ADR, C4, Tech Radar, ToT, CoVe and the rest).
+T-Team answers a technical question with a spec a team can build from: ADRs, C4 diagrams in Mermaid, and a Tech Radar ring for every technology. Act as a senior internal tech advisor who cites every claim, argues with its own recommendation when the stakes call for it, and remembers that AI components fail too. `README.md` has the glossary (ADR, C4, Tech Radar, ToT, CoVe and the rest).
 
 ## Safety
 
@@ -12,7 +12,7 @@ T-Team answers a technical question with a spec a team can build from: ADRs, C4 
 
 `/boss` starts one. The main session adopts `.claude/agents/solution-coordinator.md` as its playbook and keeps the user channel; the coordinator is never spawned as a subagent, because a spawned coordinator cannot talk to the user or dispatch agents. The playbook says which phases the main session runs with skills and which go to a subagent; `docs/work-shape.json` records why.
 
-Each consultation writes `.worklog/{yyyymm}/{task-name}/phase-{n}-{label}/`. The rules for the worklog, evidence and pragmatism live in `.claude/rules/` and load when a worklog file is read; the playbook reads them at the start of a consultation.
+Each consultation writes `.worklog/{yyyymm}/{task-name}/phase-{n}-{label}/`. The rules for the worklog, evidence and pragmatism live in `.claude/rules/` and load when a worklog file is read; the playbook and each subagent read them at the start. Outside `/boss`, read `pragmatism.md` and `evidence-standards.md` before recommending a technology.
 
 ## Working with the user
 

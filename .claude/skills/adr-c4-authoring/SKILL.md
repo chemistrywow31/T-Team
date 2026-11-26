@@ -118,7 +118,7 @@ graph TB
 
 Legend: containers (deployable units), tech stack per container, communication protocols.
 
-**Level 3 — Component** (one per significant container):
+**Level 3 — Component** (one per significant container; when it would only repeat Level 2, as for a single-process tool, record why in `phase-5-spec/decisions.md` instead):
 
 ```mermaid
 graph TB
