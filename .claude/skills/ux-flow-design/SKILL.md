@@ -11,7 +11,11 @@ Provide a structured method for designing user flows that cover happy paths, err
 
 ## When to Use
 
-Use this skill during Phase 4 (UX/Flow Design) when the UX Designer needs to map out user journeys for core features.
+Phase 4 of a consultation, run by the main session with the user. Start from the confirmed Requirements Summary and Technology Selection: who the user types are, what core tasks they have, and which technical choices constrain the interface (real-time or polling, offline). Present one task's flow at a time, take the user's changes, and confirm before the next. Write to `phase-4-ux/`.
+
+Technology is settled in Phase 3. If a flow seems to need a different technology, raise the conflict with the user instead of changing the choice. Design only the features in the Requirements Summary; an addition goes into the requirements first, with the user's yes.
+
+Prefer conventional interaction patterns and standard components to novel ones, use the same pattern for the same kind of action everywhere, let users undo and confirm destructive actions, and show only what the current step needs.
 
 ## Method
 
@@ -77,6 +81,34 @@ Check each flow against these criteria:
 - Is every error state recoverable?
 - Are loading states accounted for?
 - Does the flow use standard interaction patterns (no custom behaviors where standard ones work)?
+
+### Step 6: Write the UX Design Spec
+
+```markdown
+# UX Design Spec
+
+## User Types
+| Type | Description | Primary Tasks |
+|------|------------|---------------|
+
+## User Flows
+### {Task Name}
+**Actor**: {user type}
+**Entry Point**: {how the user starts}
+**Preconditions**: {what must be true}
+
+{Mermaid graph TD: happy path and error paths}
+
+| Step | User Action | System Response | Error Handling |
+|------|------------|----------------|----------------|
+
+## Interaction Patterns
+| Pattern | Usage | Behavior |
+|---------|-------|----------|
+
+## State Diagram
+{Mermaid stateDiagram-v2}
+```
 
 ## Examples
 

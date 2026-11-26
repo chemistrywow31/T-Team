@@ -1,0 +1,24 @@
+{
+  "flows": [
+    {
+      "name": "consultation",
+      "shape": "agent-group",
+      "parallel": "",
+      "isolated_check": "The spec is handed to other people to implement (a 2026-07 consultation), so the Phase 6 reviewers are the last check before it leaves. Working from the artifacts without the author's reasoning, they found four Major issues the author had missed, among them an ADR citing a source whose key claim pointed the other way and a protocol that the spec and its C4 diagram stated differently.",
+      "overflow": "",
+      "why": "One user flow: question in, reviewed spec out. The main session runs Phases 1-5 with skills because they chain on each other's confirmed output and Phases 1-4 need the user; only the checks that lose their value in the author's context get their own agents.",
+      "roles": {
+        "solution-coordinator": "kept: the main-session playbook adopted through /boss.",
+        "spec-reviewer": "kept: isolated check on the spec's format, consistency and evidence chain; ran as a subagent in a 2026-07 consultation and found two Major issues.",
+        "code-reviewer": "kept: isolated check on the spec's code blocks, with Bash to run syntax checks; found two Major issues in the same consultation. Its scope does not overlap the Spec Reviewer's, so the two can be dispatched together, though no recorded run shows them running concurrently. Merging it into the Spec Reviewer is a candidate for a later pass.",
+        "process-reviewer": "kept: a retrospective on how the coordinator ran the consultation is only independent outside the coordinator's context; in the same consultation it traced the root cause of an outdated model-generation claim the user had caught and proposed seven process changes the coordinator had not.",
+        "solution-skeptic": "kept, flow not observed: neither recorded consultation's worklog has a debate-summary.md, so Phase 2.5 has never run. The design calls for a check argued from counter-evidence in a fresh context; the role stays until a real run shows whether it earns its place.",
+        "solution-advocate": "kept, flow not observed: same as the Skeptic. Whether the main session could defend its own recommendation instead stays open until Phase 2.5 has run.",
+        "requirements-analyst": "folded into the requirements-discovery skill: Phase 1 is an interview (eight rounds in the 2026-07 consultation), and a subagent cannot talk to the user, so every question had to go through a NEEDS_CONTEXT relay.",
+        "solution-analyst": "folded into the solution-analysis skill: Phases 2-3 are interactive and chain on Phase 1; in the 2026-07 consultation they were compressed into the Phase 1 conversation and recorded in phase-1-discovery/.",
+        "ux-designer": "folded into the ux-flow-design skill: Phase 4 is interactive, and in the 2026-07 consultation it ran inside the Phase 1 conversation.",
+        "spec-writer": "folded into the spec-authoring skill: Phase 5 reads every confirmed upstream artifact in order and has one author; as a subagent in the 2026-07 consultation its findings.md write was blocked and the coordinator had to persist it."
+      }
+    }
+  ]
+}

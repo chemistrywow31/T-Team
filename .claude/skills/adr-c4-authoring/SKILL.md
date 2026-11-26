@@ -7,13 +7,13 @@ description: Author architecture decision records, C4 diagrams, and Tech Radar t
 
 ## Purpose
 
-Produce spec deliverables in the industry-standard ADR + C4 + Tech Radar format. This is the canonical output format for Phase 5 spec authoring and Phase 6 review. Spec Writer invokes this skill once per spec; Spec Reviewer invokes the validation portion to verify conformance.
+Produce spec deliverables in the industry-standard ADR + C4 + Tech Radar format. This is the canonical output format for Phase 5 spec authoring and Phase 6 review. The main session applies it in Phase 5 through `spec-authoring`; Spec Reviewer applies the validation portion to verify conformance.
 
 ## When to Use
 
-- **Phase 5 (Spec Authoring)**: Spec Writer applies all three formats to produce the deliverable.
+- **Phase 5 (Spec Authoring)**: apply all three formats to produce the deliverable.
 - **Phase 6 (Review)**: Spec Reviewer applies the validation checklist.
-- **Solution Analyst (Phase 2-3)**: Use the Tech Radar tagging schema when classifying technology candidates.
+- **Phase 2-3 analysis**: Use the Tech Radar tagging schema when classifying technology candidates.
 
 ## Method
 
@@ -118,7 +118,7 @@ graph TB
 
 Legend: containers (deployable units), tech stack per container, communication protocols.
 
-**Level 3 — Component** (one per significant container):
+**Level 3 — Component** (one per significant container; when it would only repeat Level 2, as for a single-process tool, record why in `phase-5-spec/decisions.md` instead):
 
 ```mermaid
 graph TB

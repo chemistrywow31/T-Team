@@ -16,7 +16,7 @@ The two axes answer different questions and are both required for Level 4 consul
 
 ## When to Use
 
-Use this skill when Solution Analyst evaluates a proposed technical approach during Phase 2 (Multi-dimensional Analysis). Apply it to the overall solution and to individual component decisions.
+Use this skill when the main session evaluates a proposed technical approach during Phase 2 (Multi-dimensional Analysis). Apply it to the overall solution and to individual component decisions.
 
 ## Method
 
@@ -52,7 +52,7 @@ Independent of where the idea comes from, classify what level of production vali
 
 The Layer-A/B/C classification appears in:
 - ADR Layer-A/B/C Existence Proof section (per `adr-c4-authoring` skill)
-- Solution Analyst's Phase 2 output (the analysis report)
+- The Phase 2 output (the analysis report)
 - Layer-C disclosures in deliverables when applicable
 
 ### Step 4: Layer-C Honesty Disclosure
